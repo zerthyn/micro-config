@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: file:/Users/rhydo/IdeaProjects/micro-ecom-2/config-server/src/main/resources/config
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - health
+          - info
+          - refresh
+          - busrefresh
+
+server:
+  port: 8888
