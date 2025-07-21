@@ -1,0 +1,23 @@
+#spring:
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: micro-product
+#          uri: lb://MICRO-PRODUCT
+#          predicates:
+#            - Path=/api/products/**
+#        - id: micro-user
+#          uri: lb://MICRO-USER
+#          predicates:
+#            - Path=/api/users/**
+#        - id: micro-order
+#          uri: lb://MICRO-ORDER
+#          predicates:
+#            - Path=/api/orders/**, /api/cart/**
+#        - id: micro-eureka
+#          uri: http://localhost:8761
+#          predicates:
+#            - Path=/eureka/main
+
+server:
+  port: 8080
