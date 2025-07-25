@@ -49,3 +49,8 @@ resilience4j:
         automatic-transition-from-open-to-half-open-enabled: true
         sliding-window-type: count_based
         sliding-window-size: 10
+  retry:
+    instances:
+      myRetry:
+        max-attempts: 5
+        wait-duration: 500ms
