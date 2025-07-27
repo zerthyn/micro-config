@@ -54,3 +54,9 @@ resilience4j:
       myRetry:
         max-attempts: 5
         wait-duration: 500ms
+  ratelimiter:
+    instances:
+      myRateLimiter:
+        timeout-duration: 0
+        limit-refresh-period: 4s
+        limit-for-period: 2
