@@ -30,6 +30,14 @@ management:
 server:
   port: 8083
 
+rabbitmq:
+  exchange:
+    name: order.exchange
+  queue:
+    name: order.queue
+  routing:
+    key: order.tracking
+
 eureka:
   client:
     serviceUrl:
